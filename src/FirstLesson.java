@@ -42,7 +42,7 @@ public class FirstLesson {
         do {
             System . out . println ( " Импyль c номер " + n ) ;
         } while ( n-- > 0 ) ;
-*/
+
         int num;
         boolean is_Prirne;
         num = 14;
@@ -60,32 +60,9 @@ public class FirstLesson {
         myBox.input(myBox.ras(45,32,5));
         Box myBox_1 = new Box();
 
-        System.out.println("Объем при инциализации конструктором: " + myBox_1.ras_1());
+        System.out.println("Объем при инциализации конструктором: " + myBox_1.ras());
+
+         */
     }
 }
-class Box{
-    double width;
-    double height;
-    double depth;
-    double obiem;
 
-    Box (){
-        width = 10;
-        height = 10;
-        depth = 10;
-    }
-
-    public double ras (double width, double height, double depth){
-        obiem = width * height * depth;
-        return obiem;
-    }
-
-    public double ras_1 () {
-        obiem = width * height * depth;
-        return obiem;
-    }
-
-    public void input(double obiem){
-        System.out.println("Объем равен: " + obiem);
-    }
-}
