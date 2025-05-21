@@ -6,5 +6,7 @@ public class Demo {
         c.callBack(3);
         // Нельзя вызвать, тк метод не определен в интерфейсе
         //c.nonIfaceMeth();
+        CallBack ob = new AnotherClient();
+        ob.callBack(3);
     }
 }
