@@ -2,8 +2,9 @@ package Interface;
 
 public class Demo {
     public static void main(String[] args) {
-        Client c = new Client();
+        CallBack c = new Client();
         c.callBack(3);
-        c.nonIfaceMeth();
+        // Нельзя вызвать, тк метод не определен в интерфейсе
+        //c.nonIfaceMeth();
     }
 }
