@@ -1,8 +1,10 @@
 package StudyByBook;
 
 import mypackage.PacMan;
+import StudyByBook.EnumDemo.AppleTwo;
 
 import java.sql.SQLOutput;
+
 
 class Box {
     double width;
@@ -148,7 +150,112 @@ public class StudyByBook {
         System.out.println(figref.area());
          */
 
-        PacMan pac = new PacMan(2,3);
-        System.out.println("Вызов класса из другого пакета: " + pac.plus());
+        //PacMan pac = new PacMan(2,3);
+        //System.out.println("Вызов класса из другого пакета: " + pac.plus());
+
+        // Изучение вывода главного потока
+        //StreamEx ex = new StreamEx();
+        //ex.streamExample();
+
+        // Изучение создание дочернего потока
+        /*
+        NewThread nt = new NewThread();
+        nt.t.start();
+        try{
+            for (int i = 5; i > 0; i--){
+                System.out.println("Главный поток: " + i);
+                Thread.sleep(1000);
+            }
+        } catch (InterruptedException e){
+            System.out.println("Главный поток прерван.");
+        }
+        System.out.println("Завершение Главного потока.");
+
+         */
+
+        //Изучение создания потока путем расширения класса Thread
+        /*
+        NewThreadSec nts = new NewThreadSec();
+        nts.start();
+        try{
+            for (int i = 5; i > 0; i--){
+                System.out.println("Главный поток: " + i);
+                Thread.sleep(1000);
+            }
+        } catch (InterruptedException e){
+            System.out.println("Главный поток прерван.");
+        }
+        System.out.println("Завершение Главного потока.");
+        */
+
+        //Изучение метода Throw в исключениях
+        /*
+        ExceptionDemo exc = new ExceptionDemo();
+        try {
+            exc.demoproc();
+        } catch (NullPointerException e){
+            System.out.println("Повторно перехвачено: " + e);
+        }
+         */
+
+        //Изучение метода Throws в исключениях
+        /*
+        ExceptionDemoThrows excdt = new ExceptionDemoThrows();
+        try {
+            excdt.throwOne();
+        } catch (IllegalAccessException e){
+            System.out.println("Перехвачено " + e);
+        }
+         */
+
+        // Изучение Enum
+        /*
+        EnumDemo ed = new EnumDemo();
+        ed.appleDemo();
+        System.out.println();
+
+        EnumDemo.AppleTwo ap;
+        System.out.println("Яблоки сорта Winesapp стоят: " +
+                EnumDemo.AppleTwo.Winesapp.getPrice() +
+                " центов. \n");
+        System.out.println("Цены на все сорта яблок:");
+        for(AppleTwo a : AppleTwo.values()){
+            System.out.println("Яблоки сорта " + a + " стоят " +
+                    a.getPrice() + " центов.");
+        }
+        System.out.print("\n ----- \n");
+
+        //Демонстрация методов ordinal(), compareTo() и equals()
+        AppleTwo ap2, ap3;
+        System.out.println("Все константы перечисления Apple" +
+                " вместе с их порядковыми номерами: ");
+        for (AppleTwo a : AppleTwo.values()){
+            System.out.println( a + " - " + a.ordinal());
+        }
+        ap = AppleTwo.RedDell;
+        ap2 = AppleTwo.GoldenDell;
+        ap3 = AppleTwo.RedDell;
+
+        System.out.println();
+
+        if (ap.compareTo(ap2) < 0)
+            System.out.println(ap + " находится перед " + ap2);
+        if (ap.compareTo(ap2) > 0)
+            System.out.println(ap2 + " находится перед " + ap);
+        if (ap.compareTo(ap3) == 0)
+            System.out.println(ap + " равно " + ap3);
+
+        System.out.println();
+        if (ap.equals(ap2))
+            System.out.println("Ошибка!");
+        if (ap.equals(ap3))
+            System.out.println(ap + " равно " + ap3);
+        if (ap == ap3)
+            System.out.println(ap + " == " + ap3);
+
+         */
+
+        //Изучение Аннотаций
+        System.out.println("Привет");
     }
 }
